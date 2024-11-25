@@ -20,3 +20,20 @@ def bubble_sort(pole):
     
 print(bubble_sort)
 
+arrayb = [88, 7, 63, 85, 3, 2, 66, 8, 95,55]
+def is_sorted(arrayb):
+    for i in range(1, len(arrayb)):
+        if arrayb[i] < arrayb[i-1]:
+            return False
+    return True
+
+def bogosort(arrayb):
+    count = 0
+    while not is_sorted(arrayb):
+        random.shuffle(arrayb)
+        count += 1
+        print(f"Pokus (count): (arrayb)")
+    print(f"Seznam seřezan po (count) pokusech.")
+
+bogosort(arrayb)
+print("Bogo", arrayb)
